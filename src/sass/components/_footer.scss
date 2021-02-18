@@ -107,6 +107,11 @@
     fill: currentColor;
   }
 
+  &-link:hover,
+  &-link:focus {
+    background-color: $accent-color;
+  }
+
   &-item {
     width: 32px;
     height: 32px;
@@ -174,6 +179,14 @@
   justify-content: center;
   padding-bottom: 25px;
   padding-top: 22px;
+  @media screen and (min-width: $min-tablet-width) {
+    padding-bottom: 18px;
+    padding-top: 29px;
+  }
+  @media screen and (min-width: $min-desctop-width) {
+    padding-bottom: 10px;
+    padding-top: 9px;
+  }
 
   &-text {
     width: 150px;
@@ -186,5 +199,10 @@
     text-align: center;
 
     color: $additional-color;
+    @media screen and (min-width: $min-tablet-width) {
+      width: 276px;
+      line-height: 1.86;
+      letter-spacing: 0.02em;
+    }
   }
 }
