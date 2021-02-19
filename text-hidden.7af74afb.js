@@ -117,21 +117,45 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/modal.js":[function(require,module,exports) {
+})({"js/text-hidden.js":[function(require,module,exports) {
 (function () {
-  var refs = {
-    openModalBtn: document.querySelector("[data-modal-open]"),
-    closeModalBtn: document.querySelector("[data-modal-close]"),
-    modal: document.querySelector("[data-modal]")
-  };
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-
-  function toggleModal() {
-    document.body.classList.toggle("modal-open");
-    refs.modal.classList.toggle("is-hidden");
-  }
+  var iconBtnRef = document.querySelector("[data-text-button]");
+  var textFirstItem = document.querySelector("[data-mobile-text]");
+  var textFirstItemTablet = document.querySelector("[data-text]");
+  iconBtnRef.addEventListener("click", function () {
+    var expanded = iconBtnRef.getAttribute("aria-expanded") === "true" || false;
+    iconBtnRef.classList.toggle("is-open");
+    iconBtnRef.setAttribute("aria-expanded", !expanded);
+    textFirstItem.classList.toggle("is-open");
+    textFirstItemTablet.classList.toggle("is-open");
+  });
 })();
+
+(function () {
+  var iconBtnSecRef = document.querySelector("[data-text-button-sec]");
+  var textSecItem = document.querySelector("[data-mobile-texts]");
+  var textSecItemTablet = document.querySelector("[data-texts]");
+  iconBtnSecRef.addEventListener("click", function () {
+    var expanded = iconBtnSecRef.getAttribute("aria-expanded") === "true" || false;
+    iconBtnSecRef.classList.toggle("is-open");
+    iconBtnSecRef.setAttribute("aria-expanded", !expanded);
+    textSecItem.classList.toggle("is-open");
+    textSecItemTablet.classList.toggle("is-open");
+  });
+})();
+
+(function () {
+  var iconBtnThRef = document.querySelector("[data-text-button-th]");
+  var textThItem = document.querySelector("[data-mobile-textth]");
+  var textThItemTablet = document.querySelector("[data-textth]");
+  iconBtnThRef.addEventListener("click", function () {
+    var expanded = iconBtnThRef.getAttribute("aria-expanded") === "true" || false;
+    iconBtnThRef.classList.toggle("is-open");
+    iconBtnThRef.setAttribute("aria-expanded", !expanded);
+    textThItem.classList.toggle("is-open");
+    textThItemTablet.classList.toggle("is-open");
+  });
+})(); // tablet & desctop
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -336,5 +360,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal.js"], null)
-//# sourceMappingURL=/modal.4331011c.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/text-hidden.js"], null)
+//# sourceMappingURL=/text-hidden.7af74afb.js.map
