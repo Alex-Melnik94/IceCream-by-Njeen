@@ -118,14 +118,26 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/hero-modal.js":[function(require,module,exports) {
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+(function () {
+  var refs = {
+    openModalBtn: document.querySelector('[data-header-modal-open]'),
+    closeModalBtn: document.querySelector('[data-header-modal-close]'),
+    modal: document.querySelector('[data-header-modal]')
+  };
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+  }
+})();
 
 (function () {
-  var _refs;
-
-  var refs = (_refs = {
-    openModalBtn: document.querySelector('[data-modal-inside-open]')
-  }, _defineProperty(_refs, "openModalBtn", document.querySelector('[data-modal-outside-open]')), _defineProperty(_refs, "closeModalBtn", document.querySelector('[data-modal-close]')), _defineProperty(_refs, "modal", document.querySelector('[data-modal]')), _refs);
+  var refs = {
+    openModalBtn: document.querySelector('[data-header-in-modal-open]'),
+    // closeModalBtn: document.querySelector('[data-header-modal-close]'),
+    modal: document.querySelector('[data-header-modal]')
+  };
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
@@ -161,7 +173,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56801" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63195" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

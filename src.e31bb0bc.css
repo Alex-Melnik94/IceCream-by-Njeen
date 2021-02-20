@@ -799,6 +799,207 @@ button {
   }
 }
 
+.contacts__item {
+  padding-left: 0px;
+  margin-left: 20px;
+  padding-top: 43px;
+}
+.contacts__cafe {
+  padding-right: auto;
+  width: 80px;
+  height: auto;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #f0d1a5;
+  border-radius: 4px;
+}
+.contacts__foodtruck {
+  padding-right: auto;
+  width: 130px;
+  height: auto;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #c2e297;
+  border-radius: 4px;
+}
+.contacts__town {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  width: 89px;
+  height: 22px;
+  left: 70px;
+  top: 5651px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+.contacts__descrip {
+  width: 179px;
+  height: auto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #e1e1e1;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.contacts__days {
+  width: 107px;
+  height: 22px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: #000000;
+}
+.contacts__time {
+  width: 107px;
+  height: 22px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: #ffa5ba;
+}
+.contacts__adress {
+  width: 179px;
+  height: 37px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #907e82;
+}
+@media screen and (max-width: 767px) {
+  .contacts__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .contacts__location {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__location {
+    margin-right: 15px;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 1279px) {
+  .contacts {
+    background-image: linear-gradient(to bottom, #ffffff 10%, #fff5f6 10%, #fff5f6 90%);
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .contacts {
+    padding-bottom: 115px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .contacts {
+    padding-bottom: 160px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contacts {
+    background-color: #fff5f6;
+    padding-bottom: 165px;
+  }
+}
+.contacts__column {
+  width: 220px;
+  height: 427px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .contacts__column {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.contacts__column:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .contacts__column:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__column:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.locations {
+  width: 192px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 24px;
+  background-color: #d41342;
+  border-color: transparent;
+}
+
+.franchise {
+  width: 192px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  color: #d41342;
+  border-radius: 24px;
+  background-color: #ffffff;
+  border-color: transparent;
+}
+
+.locations-svg {
+  fill: #ffffff;
+  width: 4px;
+  height: 8px;
+}
+
+.franchise-svg {
+  fill: #d41342;
+  width: 4px;
+  height: 8px;
+}
+
 /* стили основного контейнера слайдера */
 .slider {
   position: relative;
@@ -2377,6 +2578,187 @@ li {
 }
 .text-first.is-open {
   display: block;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.ishidden .modal-area {
+  transform: translate(-50%, -50%) scale(1, 1);
+}
+
+.modal-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  padding: 40px;
+  width: 320px;
+  max-height: 100vh;
+  background-color: #fff5f6;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%) scale(1);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 540px) {
+  .modal-area {
+    width: 540px;
+  }
+}
+
+.modal-area__button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  fill: #ffffff;
+  background-color: #d41443;
+  cursor: pointer;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-area__button:hover, .modal-area__button:focus {
+  fill: #d41443;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter-item:nth-child(-n+2) {
+    margin-bottom: 15px;
+  }
+}
+.filter-item__button {
+  border-radius: 22px;
+  padding: 6px 22px;
+  min-width: 73px;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  color: #d41443;
+  background-color: #ffffff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.62;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filter-item__button:hover, .filter-item__button:focus {
+  color: #ffffff;
+  background-color: #d41443;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.products-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  width: 130px;
+  height: 130px;
+  background-color: #d41443;
+}
+@media screen and (max-width: 539px) {
+  .products-card:nth-child(odd) {
+    margin-right: 15px;
+  }
+  .products-card:nth-child(3n+2) {
+    background-color: #f0d1a5;
+  }
+  .products-card:nth-child(3n+3) {
+    background-color: #c2e297;
+  }
+}
+@media screen and (min-width: 540px) {
+  .products-card:nth-child(3n+1) {
+    margin-right: 15px;
+  }
+  .products-card:nth-child(3n+2) {
+    margin-right: 15px;
+    background-color: #f0d1a5;
+  }
+  .products-card:nth-child(3n+3) {
+    background-color: #c2e297;
+  }
+}
+
+.product-descr__title {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.add-btn {
+  border-radius: 50%;
+  border-style: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  fill: #d41443;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(5%);
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.add-btn:hover, .add-btn:focus {
+  background-color: #d41443;
+  fill: #ffffff;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
