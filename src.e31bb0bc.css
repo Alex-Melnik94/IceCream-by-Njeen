@@ -838,207 +838,6 @@ button {
   }
 }
 
-.contacts__item {
-  padding-left: 0px;
-  margin-left: 20px;
-  padding-top: 43px;
-}
-.contacts__cafe {
-  padding-right: auto;
-  width: 80px;
-  height: auto;
-  font-family: DM Sans;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  background-color: #f0d1a5;
-  border-radius: 4px;
-}
-.contacts__foodtruck {
-  padding-right: auto;
-  width: 130px;
-  height: auto;
-  font-family: DM Sans;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  background-color: #c2e297;
-  border-radius: 4px;
-}
-.contacts__town {
-  margin-top: 25px;
-  margin-bottom: 10px;
-  width: 89px;
-  height: 22px;
-  left: 70px;
-  top: 5651px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
-  letter-spacing: 0.04em;
-  color: #000000;
-}
-.contacts__descrip {
-  width: 179px;
-  height: auto;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: #e1e1e1;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #e1e1e1;
-}
-.contacts__days {
-  width: 107px;
-  height: 22px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
-  color: #000000;
-}
-.contacts__time {
-  width: 107px;
-  height: 22px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
-  color: #ffa5ba;
-}
-.contacts__adress {
-  width: 179px;
-  height: 37px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #907e82;
-}
-@media screen and (max-width: 767px) {
-  .contacts__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contacts__buttons {
-    display: flex;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .contacts__location {
-    margin-bottom: 10px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contacts__location {
-    margin-right: 15px;
-    margin-bottom: 0px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 1279px) {
-  .contacts {
-    background-image: linear-gradient(to bottom, #ffffff 10%, #fff5f6 10%, #fff5f6 90%);
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .contacts {
-    padding-bottom: 115px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .contacts {
-    padding-bottom: 160px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .contacts {
-    background-color: #fff5f6;
-    padding-bottom: 165px;
-  }
-}
-.contacts__column {
-  width: 220px;
-  height: 427px;
-  background-color: #ffffff;
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-  border-radius: 24px;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .contacts__column {
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-.contacts__column:not(:last-child) {
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 768px) {
-  .contacts__column:not(:last-child) {
-    margin-right: 20px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contacts__column:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contacts__list {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.locations {
-  width: 192px;
-  height: 44px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
-  border-radius: 24px;
-  background-color: #d41342;
-  border-color: transparent;
-}
-
-.franchise {
-  width: 192px;
-  height: 44px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  align-items: center;
-  text-align: center;
-  color: #d41342;
-  border-radius: 24px;
-  background-color: #ffffff;
-  border-color: transparent;
-}
-
-.locations-svg {
-  fill: #ffffff;
-  width: 4px;
-  height: 8px;
-}
-
-.franchise-svg {
-  fill: #d41342;
-  width: 4px;
-  height: 8px;
-}
-
 /* стили основного контейнера слайдера */
 .slider {
   position: relative;
@@ -2551,7 +2350,7 @@ li {
 
 .products__item-text-mobile {
   display: block;
-  margin: 66px auto 30px;
+  margin: 66px auto 0;
   width: 200px;
   font-family: DM Sans;
   font-weight: bold;
@@ -2569,7 +2368,8 @@ li {
 
 .products__item-text {
   display: block;
-  margin: 66px auto 40px;
+  display: block;
+  margin: 66px auto 0;
   width: 198px;
   font-family: DM Sans;
   font-weight: bold;
@@ -2584,7 +2384,6 @@ li {
     width: 241px;
     font-size: 16px;
     line-height: 1.75;
-    margin-bottom: 60px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2593,10 +2392,11 @@ li {
   }
 }
 
-.button {
+.products__button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
   margin-right: auto;
   margin-left: auto;
   width: 40px;
@@ -2604,6 +2404,12 @@ li {
   border-radius: 50%;
   background-color: #ffffff;
   border: 0;
+  outline: 0;
+}
+@media screen and (min-width: 1280px) {
+  .products__button {
+    margin-top: 60px;
+  }
 }
 
 .products__svg {
@@ -2612,32 +2418,33 @@ li {
   fill: #d41443;
 }
 
-.text__mobile-first {
-  display: none;
+.products__item-text-hidden {
+  margin-right: auto;
+  margin-left: auto;
+  width: 198px;
+  font-family: DM Sans;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.78;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
 }
-.text__mobile-first.is-open {
-  display: block;
+@media screen and (min-width: 1280px) {
+  .products__item-text-hidden {
+    width: 241px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+@media screen and (max-width: 767px) {
+  .products__item-text-hidden {
+    display: none;
+  }
 }
 
-.text__mobile-sec {
-  display: none;
-}
-.text__mobile-sec.is-open {
-  display: block;
-}
-
-.text__mobile-third {
-  display: none;
-}
-.text__mobile-third.is-open {
-  display: block;
-}
-
-.text-first {
-  display: none;
-}
-.text-first.is-open {
-  display: block;
+.rotate {
+  transform: rotate(-90deg);
 }
 
 .backdrop {
