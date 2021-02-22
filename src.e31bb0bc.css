@@ -1307,7 +1307,7 @@ li {
 @media screen and (min-width: 1280px) {
   .logo {
     position: absolute;
-    top: 7px;
+    top: 0;
     left: -70px;
   }
 }
@@ -1384,6 +1384,13 @@ li {
   background-color: #ecebeb;
 }
 
+.header__inside-button:focus,
+.header__outside-button:focus {
+  outline: none;
+  border: #d41443 2px solid;
+  border-radius: 22px;
+}
+
 @media screen and (max-width: 767px) {
   .header__menu-container {
     width: 100%;
@@ -1411,7 +1418,7 @@ li {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .header__menu-container {
-    width: 34vw;
+    width: 254px;
     padding: 60px 24px;
     top: 0;
     right: 0;
@@ -1426,7 +1433,7 @@ li {
 @media screen and (min-width: 1280px) {
   .header__menu-container {
     width: auto;
-    margin-right: 120px;
+    margin-right: 100px;
   }
 }
 
@@ -1444,7 +1451,7 @@ li {
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) and (max-width: 1279px) {
   .header__menu-container--is-hidden {
-    width: 34vw;
+    width: 254px;
     top: 0;
     right: 0;
     bottom: 0;
@@ -1564,6 +1571,21 @@ li {
 .header__page:hover .header__link,
 .header__page:focus .header__link {
   color: #d41443;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: 400ms;
+}
+
+@media screen and (max-width: 1279px) {
+  .is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .hero__heading {
@@ -1709,7 +1731,6 @@ li {
   line-height: 1.5;
   color: #ffffff;
   width: 114px;
-  margin-bottom: 7px;
 }
 @media screen and (max-width: 767px) {
   .hero__article-text {
@@ -1718,7 +1739,6 @@ li {
 }
 @media screen and (min-width: 1280px) {
   .hero__article-text {
-    margin-bottom: 20px;
     font-size: 14px;
     width: 200px;
     position: relative;
@@ -1734,6 +1754,7 @@ li {
   height: 18px;
   border: none;
   padding: 0;
+  margin-top: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1743,6 +1764,7 @@ li {
   .hero__arrow {
     width: 26px;
     height: 26px;
+    margin-top: 20px;
   }
 }
 
@@ -1750,6 +1772,12 @@ li {
 .hero__arrow:focus {
   background-color: #ecebeb;
   fill: #c7133e;
+}
+
+.hero__arrow:focus {
+  outline: none;
+  border: #d41443 2px solid;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1771,8 +1799,7 @@ li {
   font-size: 8px;
   line-height: 1.5;
   color: #ffffff;
-  width: 220px;
-  margin-bottom: 7px;
+  width: 114px;
 }
 @media screen and (max-width: 767px) {
   .hero__article-full {
@@ -1781,9 +1808,8 @@ li {
 }
 @media screen and (min-width: 1280px) {
   .hero__article-full {
-    margin-bottom: 20px;
     font-size: 14px;
-    width: 320px;
+    width: 200px;
     position: relative;
     z-index: 2;
   }
@@ -1956,7 +1982,7 @@ li {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-125px, 105px);
+  transform: translate(-125px, 85px);
   animation-name: circleMotionMobile;
   animation-duration: 1500ms;
 }
@@ -1985,50 +2011,62 @@ li {
 
 @keyframes iceCreamMotion {
   0% {
-    transform: translateY(100%);
+    transform: scale(0.5) translateY(100%);
+    opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: scale(1) translateY(0);
+    opacity: 1;
   }
 }
 @keyframes milkJarMotion {
   0% {
     transform: translateX(-100%);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes womanMotion {
   0% {
     transform: translateX(100%);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes circleMotionMobile {
   0% {
     transform: scale(0) translate(0, -100%);
+    opacity: 0;
   }
   100% {
-    transform: scale(1) translate(-125px, 105px);
+    transform: scale(1) translate(-125px, 85px);
+    opacity: 1;
   }
 }
 @keyframes circleMotionTablet {
   0% {
     transform: scale(0) translate(100%, -100%);
+    opacity: 0;
   }
   100% {
     transform: scale(1) translate(-70px, 40px);
+    opacity: 1;
   }
 }
 @keyframes circleMotionDesktop {
   0% {
     transform: scale(0) translate(0, -100%);
+    opacity: 0;
   }
   100% {
     transform: scale(1) translate(-160px, 50px);
+    opacity: 1;
   }
 }
 .products__section {
