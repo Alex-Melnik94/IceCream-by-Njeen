@@ -117,38 +117,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/scroll.js":[function(require,module,exports) {
-var linkNav = document.querySelectorAll('[href^="#"]'),
-    //выбираем все ссылки к якорю на странице
-V = 0.2; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
-
-for (var i = 0; i < linkNav.length; i++) {
-  linkNav[i].addEventListener('click', function (e) {
-    //по клику на ссылку
-    e.preventDefault(); //отменяем стандартное поведение
-
-    var w = window.pageYOffset,
-        // производим прокрутка прокрутка
-    hash = this.href.replace(/[^#]*(.*)/, '$1'); // к id элемента, к которому нужно перейти
-
-    t = document.querySelector(hash).getBoundingClientRect().top, // отступ от окна браузера до id
-    start = null;
-    requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
-
-    function step(time) {
-      if (start === null) start = time;
-      var progress = time - start,
-          r = t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t);
-      window.scrollTo(0, r);
-
-      if (r != w + t) {
-        requestAnimationFrame(step);
-      } else {
-        location.hash = hash; // URL с хэшем
-      }
-    }
-  }, false);
-}
+})({"js/modal-scroll.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $(".header__outside-button").click(function () {
+    $("body").addClass("open-modal");
+  });
+  $(".modal-area__button").click(function () {
+    $("body").removeClass("open-modal");
+  });
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -353,5 +330,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/scroll.js"], null)
-//# sourceMappingURL=/scroll.1c6e0918.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal-scroll.js"], null)
+//# sourceMappingURL=/modal-scroll.61440091.js.map
