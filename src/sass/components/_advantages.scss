@@ -1,9 +1,7 @@
 .advantages {
   padding-bottom: 97px;
   background-color: $secondary-bcg-color;
-  @media screen and (min-width: $min-desktop-width) {
-    background-color: $white-color;
-  }
+
   @media screen and(min-width:$min-tablet-width) {
     padding-bottom: 142px;
   }

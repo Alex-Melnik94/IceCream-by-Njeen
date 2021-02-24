@@ -7,14 +7,12 @@
   z-index: 1;
   margin: 0 auto;
   max-width: 1600px;
-  @media screen and(min-width:$min-desktop-width) {
-    background-color: $white-color;
-  }
+
   @media screen and(min-width:$min-tablet-width) {
     padding-top: 130px;
   }
   @media screen and(min-width:$min-desktop-width) {
-    padding-top: 244px;
+    padding-top: 125px;
   }
 
   &__label {
