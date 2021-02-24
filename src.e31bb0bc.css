@@ -2335,13 +2335,13 @@ li {
 }
 @media screen and (min-width: 768px) {
   .hero-header__item:nth-child(2) {
-    bottom: 35px;
+    top: 270px;
     left: 30px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero-header__item:nth-child(2) {
-    bottom: 45px;
+    top: 435px;
     left: 75px;
   }
 }
