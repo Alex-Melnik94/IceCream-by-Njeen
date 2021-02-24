@@ -754,37 +754,28 @@ li {
   height: 344px;
 
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-125px, 85px);
 
-  animation-name: circleMotionMobile;
+  animation-name: circleMotion;
   animation-duration: 1500ms;
 
+  @media screen and (max-width: $max-mobile-width) {
+    top: 85px;
+    left: 36px;
+  }
   @media screen and (min-width: $min-tablet-width) {
-    top: 0;
-    left: 50%;
+    top: 35px;
+    right: 137px;
 
     width: 324px;
     height: 324px;
-
-    transform: translate(-70px, 40px);
-
-    animation-name: circleMotionTablet;
-    animation-duration: 1500ms;
   }
 
   @media screen and (min-width: $min-desktop-width) {
-    top: 0;
-    left: 50%;
+    top: 50px;
+    right: 270px;
 
     width: 538px;
     height: 538px;
-
-    transform: translate(-160px, 50px);
-
-    animation-name: circleMotionDesktop;
-    animation-duration: 1500ms;
   }
 }
 
@@ -826,38 +817,14 @@ li {
   }
 }
 
-@keyframes circleMotionMobile {
+@keyframes circleMotion {
   0% {
-    transform: scale(0) translate(0, -100%);
+    transform: scale(0) translateY(-100%);
     opacity: 0;
   }
 
   100% {
-    transform: scale(1) translate(-125px, 85px);
-    opacity: 1;
-  }
-}
-
-@keyframes circleMotionTablet {
-  0% {
-    transform: scale(0) translate(100%, -100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1) translate(-70px, 40px);
-    opacity: 1;
-  }
-}
-
-@keyframes circleMotionDesktop {
-  0% {
-    transform: scale(0) translate(0, -100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1) translate(-160px, 50px);
+    transform: scale(1) translateY(0);
     opacity: 1;
   }
 }
