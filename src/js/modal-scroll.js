@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".header__outside-button").click(function () {
+    $(".modal-button").click(function () {
         $("body").addClass("open-modal");
     });
 

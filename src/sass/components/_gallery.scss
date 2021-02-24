@@ -65,6 +65,8 @@
   &:hover,
   &:focus {
     transform: scale(1.5);
+    position: relative;
+    z-index: 3;
   }
 
   @media screen and (min-width: $min-tablet-width) {
