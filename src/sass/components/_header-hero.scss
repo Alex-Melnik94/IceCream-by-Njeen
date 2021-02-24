@@ -715,12 +715,14 @@ li {
   }
 
   @media screen and (min-width: $min-tablet-width) {
-    bottom: 35px;
+    // bottom: 35px;
+    top: 270px;
     left: 30px;
   }
 
   @media screen and (min-width: $min-desktop-width) {
-    bottom: 45px;
+    // bottom: 45px;
+    top: 435px;
     left: 75px;
   }
 }
