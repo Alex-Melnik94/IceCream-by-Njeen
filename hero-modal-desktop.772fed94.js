@@ -117,18 +117,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/button.js":[function(require,module,exports) {
-(function () {
-  var menuBtnRef = document.querySelector("[data-menu-button-in]");
-  var mobileMenuRef = document.querySelector("[data-menu]");
-  menuBtnRef.addEventListener("click", function () {
-    //   const expanded =
-    //     menuBtnRef.getAttribute("aria-expanded") === "true" || false;
-    menuBtnRef.classList.toggle("header__menu-in--is-hidden"); // menuBtnRef.setAttribute("aria-expanded", !expanded);
-
-    mobileMenuRef.classList.toggle("header__menu-container--is-hidden");
-  });
-})();
+})({"js/hero-modal-desktop.js":[function(require,module,exports) {
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector('[data-desktop-modal-open]'),
+//     closeModalBtn: document.querySelector('[data-desktop-modal-close]'),
+//     modal: document.querySelector('[data-desktop-modal]'),
+//   };
+//   refs.openModalBtn.addEventListener('click', toggleModal);
+//   refs.closeModalBtn.addEventListener('click', toggleModal);
+//   function toggleModal() {
+//     refs.modal.classList.toggle('is-hidden');
+//   }
+// })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -157,7 +158,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55656" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64903" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -333,5 +334,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/button.js"], null)
-//# sourceMappingURL=/button.30c85900.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/hero-modal-desktop.js"], null)
+//# sourceMappingURL=/hero-modal-desktop.772fed94.js.map
